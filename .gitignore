@@ -1,0 +1,43 @@
+# Build e binários
+bin/
+obj/
+out/
+Debug/
+Release/
+
+# Configurações do VS
+*.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Arquivos de cache do Rider / VS Code
+.idea/
+.vscode/
+*.code-workspace
+
+# Logs
+*.log
+Logs/
+TestResult*/
+coverage*/
+
+# Pacotes NuGet (não commitar, apenas restaurar)
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Selenium / ChromeDriver
+chromedriver.exe
+chromedriver.log
+selenium-screenshot-*.png
+
+# Configurações temporárias
+launchSettings.json
