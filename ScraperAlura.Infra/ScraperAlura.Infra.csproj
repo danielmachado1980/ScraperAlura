@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ScraperAlura.Domain\ScraperAlura.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
