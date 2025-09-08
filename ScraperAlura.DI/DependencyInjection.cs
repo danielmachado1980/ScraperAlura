@@ -17,7 +17,7 @@ namespace ScraperAlura.DI
             services.Configure<RpaOptions>(config.GetSection("RPA"));
 
             // Serviços de domínio
-            services.AddScoped<ICursoRepository, CursoRepositoryMemoria>();
+            services.AddSingleton<ICursoRepository, CursoRepositoryMemoria>();
             services.AddScoped<ICursoScraper, AluraScraper>();
             services.AddScoped<ICursoService, CursoService>();
 

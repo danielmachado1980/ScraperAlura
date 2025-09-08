@@ -12,5 +12,10 @@ namespace ScraperAlura.Infra.Repositories
             _cursos.Add(curso);
             return Task.CompletedTask;
         }
+
+        public Task<List<Curso>> RetornarAsync()
+        {
+            return Task.FromResult(_cursos);
+        }
     }
 }

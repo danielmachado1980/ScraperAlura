@@ -5,5 +5,6 @@ namespace ScraperAlura.Domain.Interfaces
     public interface ICursoRepository
     {
         Task SalvarAsync(Curso curso);
+        Task<List<Curso>> RetornarAsync();
     }
 }
