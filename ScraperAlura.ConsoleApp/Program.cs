@@ -21,13 +21,13 @@ namespace ScraperAlura.ConsoleApp
             var domainService = services.GetRequiredService<ICursoService>();
 
             Console.Write("Termo de busca: ");
-            var termo = Console.ReadLine() ?? "csharp";
+            var termo = Console.ReadLine();
 
-            var titulos = await domainService.ExecutarAsync(termo);
+            var cursos = await domainService.ExecutarAsync(termo);
 
             Console.WriteLine("\nResultados:");     
-            foreach (var t in titulos)
-                Console.WriteLine($"- {t}");
+            foreach (var t in cursos)
+                Console.WriteLine($"→ {t}");
 
             Console.ReadKey();
         }

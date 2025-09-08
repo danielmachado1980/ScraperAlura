@@ -1,4 +1,5 @@
-﻿using ScraperAlura.Domain.Interfaces;
+﻿using ScraperAlura.Domain.Entities;
+using ScraperAlura.Domain.Interfaces;
 
 namespace ScraperAlura.Domain.Services
 {
@@ -19,7 +20,12 @@ namespace ScraperAlura.Domain.Services
             foreach (var c in cursos)
                 await _repo.SalvarAsync(c);
 
-            return cursos.Select(c => c.Titulo).ToArray();
+            return cursos.Select(c => $"{c.Titulo} - {c.Descricao}").ToArray();
+        }
+
+        public async Task<IList<Curso>> RetornarAsync()
+        {
+            return await _repo.RetornarAsync();
         }
     }
 }
