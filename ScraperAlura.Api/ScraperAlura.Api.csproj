@@ -14,5 +14,10 @@
     <ProjectReference Include="..\ScraperAlura.DI\ScraperAlura.DI.csproj" />
     <ProjectReference Include="..\ScraperAlura.Domain\ScraperAlura.Domain.csproj" />
   </ItemGroup>
+  
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
 
 </Project>

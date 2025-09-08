@@ -4,6 +4,9 @@ using ScraperAlura.Domain.Interfaces;
 
 namespace ScraperAlura.Api.Controllers
 {
+    /// <summary>
+    /// Controlador para gerenciar cursos da Alura.
+    /// </summary>
     [ApiController]
     [Route("api/[controller]")]
     public class CursosAluraController : ControllerBase
@@ -16,6 +19,11 @@ namespace ScraperAlura.Api.Controllers
         }
 
         // GET api/cursos?termo=csharp
+        /// <summary>
+        /// Endpoint para buscar cursos com base em um termo de pesquisa e registro em memória.
+        /// </summary>
+        /// <param name="termo"></param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Curso>>> Get([FromQuery] string termo)
         {
@@ -24,6 +32,10 @@ namespace ScraperAlura.Api.Controllers
         }
 
         // GET api/cursos/all
+        /// <summary>
+        /// Endpoint para retornar todos os cursos registrados em memória.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("all")]
         public async Task<ActionResult<IEnumerable<Curso>>> GetAll()
         {
